@@ -1,0 +1,33 @@
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+@keyframes scroll {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -200px -200px;
+    }
+  }
+
+@keyframes float {
+  from {
+    transform: translate3d(calc(-50% - 600px), -2% ,0);
+  }
+  50% {
+    transform: translate3d(calc(-50% - 600px), 2% ,0);
+  }
+  to {
+      transform: translate3d(calc(-50% - 600px), -2%,0);
+  }
+}

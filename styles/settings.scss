@@ -1,0 +1,56 @@
+@import 'main.scss';
+
+main {
+    
+    .window {
+        padding: 40px 80px;
+        .properties {
+            .property {
+                margin-bottom: 40px;
+                transition: all 0.3s linear;
+                display: none;
+
+                &.shown {
+                    display: block;
+                }
+                .label {
+                    position: relative;
+                    span {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        font-size: 40px;
+                        color: cyan;
+                        font-weight: bold;
+                        -webkit-text-stroke: 1px rgb(0, 2, 99);
+                    }
+                }
+                .value {
+                    input {
+                        width: 100%;
+                    }
+                    .toggle {
+                        display: flex;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        .btn {
+                            flex: 1 1 auto;
+                            border: none;
+                            border-radius: 0;
+                            &.active {
+                                background: rgb(122 0 255);
+                                color: white
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+
+}
+::-webkit-slider-thumb {
+    width: 100px;
+    height: 100px;
+    background: purple;
+}

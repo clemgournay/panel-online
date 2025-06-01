@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Panel</title>
+        <link rel="stylesheet" href="../styles/settings.scss">
+        <script src="../src/main.js" type="module"></script>
+    </head>
+    <body>
+        <main data-controller="settings">
+            <div class="window">
+                <div class="title">
+                    <h2>SETTINGS</h2>
+                </div>
+                <div class="content">
+
+                    <div class="properties">
+
+                        <div class="property" data-mode="all">
+                            <div class="label">
+                                <h3>MODE</h3>
+                            </div>
+                            <div class="value">
+                                <div class="toggle">
+                                    <button type="button" class="btn" data-key="mode" data-set-value="stage">STAGE CLEAR</button>
+                                    <button type="button" class="btn" data-key="mode" data-set-value="infinite">INFINITE</button>
+                                    <button type="button" class="btn" data-key="mode" data-set-value="multiplayer">MULTIPLAYER</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="property" data-mode="stage">
+                            <div class="label">
+                                <h3>STAGE</h3>
+                                <span data-value="stage"></span>
+                            </div>
+                            <div class="value">
+                                <input type="range" min="1" value="1" max="10" step="1" data-key="stage"/>
+                            </div>
+                        </div>
+
+                        <div class="property" data-mode="infinite">
+                            <div class="label">
+                                <h3>START SPEED</h3>
+                                <span data-value="speed"></span>
+                            </div>
+                            <div class="value">
+                                <input type="range" min="1" value="1" max="10" step="1" data-key="speed"/>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="controls">
+                        <button type="button" class="btn" id="start-btn">
+                            <span>START</span>
+                        </button>
+                    </div>
+            
+
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

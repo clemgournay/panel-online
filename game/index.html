@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>Panel</title>
+        <link rel="stylesheet" href="../styles/game.scss">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+        <script src="../src/main.js" type="module"></script>
+    </head>
+    <body>
+        <main data-controller="game">
+            <div class="background"></div>
+            <img class="character" src="../assets/images/characters/wich.png">
+            <div class="view-cont">
+                <div class="view" id="lobby">
+                    <div class="center">
+                        <span>WAITING FOR<br>OTHER PLAYERS...</span>
+                    </div>
+                </div>
+
+                <div class="view" id="ready">
+                    <div class="center">
+                        <span>READY ?</span>
+                        <div data-value="count"></div>
+                        <div class="actions shown">
+                            <button type="button" class="btn ready">
+                                <span>READY</span>
+                            </button>
+                        </div>
+                        <p id="other-player-ready">Wait for other players to be ready...</p>                  
+                    </div>
+                </div>
+
+                <div class="view" id="start">
+                    <div class="center">
+                        <span>READY ?</span>
+                        <div data-value="count"></div>
+                        <div class="actions shown">
+                            <button type="button" class="btn start">
+                                <span>START</span>
+                            </button>
+                        </div>                      
+                    </div>
+                </div>
+                <div class="view" id="pause">
+                    <span>PAUSE</span>
+                </div>
+                <div class="view" id="game-over">
+                    <div class="center">
+                        <span>GAME OVER</span>
+                        <div class="actions shown">
+                            <button type="button" class="btn retry">
+                                <span>RETRY</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="view" id="victory">
+                    <div class="center">
+                        <span>VICTORY!</span>
+                        <div class="actions shown">
+                            <button type="button" class="btn retry">
+                                <span>NEXT</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="window" id="scoring">
+                    <div class="properties">
+                        <div class="property stage" data-mode="stage">
+                            <div class="label">
+                                <span>STAGE </span>
+                                <span data-value="stage"></span>
+                                <span>-</Span>
+                                <span data-value="round"></span>
+                            </div>
+                        </div>
+                        <div class="property" data-mode="all">
+                            <div class="label">SCORE</div>
+                            <div class="value" data-value="score"></div>
+                        </div>
+                        <div class="property" data-mode="stage">
+                            <div class="label">SPEED</div>
+                            <div class="value" data-value="speed"></div>
+                        </div>
+                        <div class="property" data-mode="infinite">
+                            <div class="label">LEVEL</div>
+                            <div class="value" data-value="speed"></div>
+                        </div>
+                        <div class="property" data-mode="all">
+                            <div class="label">COMBO</div>
+                            <div class="value">x<span data-value="combo"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <canvas class="window" id="game-view"></canvas>
+                <canvas class="window" id="opponent-view"></canvas>
+            </div>
+        </main>
+    </body>
+</html>

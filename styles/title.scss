@@ -1,0 +1,66 @@
+@import 'main.scss';
+@import 'animations.scss';
+
+main {
+
+    width: 100%;
+    height: 100%;
+    background-size: auto 100%;
+    background-position: center center;
+    background-position-x: 300px;
+    background-image: url(../assets/images/background.jpg);
+    transition: all 5s linear;
+    
+
+    &.shown {
+        background-position-x: 0;
+        
+        &:before, &:after {
+            height: 20%;
+        }
+        h1 {
+            transform: none;
+            opacity: 1;
+        }
+    }
+
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: black;
+        transition: all 2s linear;
+    }
+
+    &:before { top: 0; }
+    &:after { bottom: 0; }
+
+    h1 {
+        font-size: 10vmin;
+        color: white;
+        transform: translate3d(20%, 0, 0);
+        opacity: 0;
+        transition: all 1s ease-out 1s;
+        -webkit-text-stroke: 4px rgb(0, 10, 153);
+        margin-bottom: 40px;
+    }
+
+    #start-btn {
+        visibility: hidden;
+        transition: all 0.5s linear;
+        font-size: 40px;
+        animation: blink 1s linear infinite;
+        margin: auto;
+        cursor: pointer;
+
+        &:hover {
+            animation: none;
+        }
+
+        &.shown {
+            visibility: visible;
+        }
+    }
+}
